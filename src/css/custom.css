@@ -26,3 +26,13 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+details > figure > img{
+  width: 30%;
+}
+
+summary > h5 {
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+
