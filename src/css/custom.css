@@ -16,6 +16,10 @@
   --ifm-code-font-size: 95%;
 }
 
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.5rem;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -27,8 +31,14 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-details > figure > img{
-  width: 30%;
+@media only screen and (max-width: 650px) {
+  .centerImg img, .centerImg figcaption {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+  }
 }
 
 summary > h5 {
@@ -36,3 +46,14 @@ summary > h5 {
   line-height: 1.8;
 }
 
+.hidden {
+  display: none;
+}
+
+.interview {
+  background-color: #fcfcfc;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+}

@@ -13,7 +13,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'owntuts', // Usually your GitHub org/user name.
   projectName: 'devviews', // Usually your repo name.
 
   presets: [
@@ -24,7 +24,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          editUrl: 'https://github.com/owntuts/devviews/edit/main/website/',
           admonitions: {
             customTypes: {
               quest: {
@@ -53,10 +53,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      hideableSidebar: true,
       navbar: {
-        title: 'Interview Dev',
+        title: 'Dev Views',
         logo: {
-          alt: 'Interview Dev',
+          alt: 'Dev Views',
           src: 'img/logo.svg',
         },
         items: [
