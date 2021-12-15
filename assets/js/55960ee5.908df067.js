@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkinterviewdev=self.webpackChunkinterviewdev||[]).push([[121],{8070:function(e){e.exports=JSON.parse('[{"name":"Angular Interview","permalink":"/devviews/docs/tags/angular-interview","count":1}]')}}]);
