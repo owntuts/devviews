@@ -1,4 +1,12 @@
-# 
+---
+sidebar_position: 1000
+sidebar_label: JIT vs AOT
+title: Differences Between JiT and AOT in Angular
+tags:
+  - Basic Angular Interviews
+---
+
+### JIT vs AOT
 
 !!!basic docs
 [----------]::

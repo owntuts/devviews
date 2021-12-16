@@ -1,30 +1,30 @@
 ---
 sidebar_position: 3
-id: angular-interview-questions-answers-junior
-sidebar_label: Angular Interviews
-title: Angular Interview Questions and Answers
+id: vuejs-interview-questions-answers-junior
+sidebar_label: Vuejs Interviews
+title: Vuejs Interview Questions and Answers
 tags:
-  - Angular Interviews
+  - Vuejs Interviews
 ---
 
-import JITvsAOT from "./angular-interviews-junior/JIT-vs-AOT.md";
-import ForRootvsForChild from "./angular-interviews-junior/forRoot-vs-forChild.md";
-import BootstrapComponentvsEntryComponent from "./angular-interviews-junior/bootstrap-component-vs-entry-component.md";
+import AppInstantvsComponent from './vuejs-interview-junior/app-instant-vuejs-component.md'
+import LocalvsGlobalComponent from './vuejs-interview-junior/local-vs-global-components.md'
+import LifeCycleHooks from './vuejs-interview-junior/lifecycle-hooks.md'
 
-# Basic Angular Interview Questions & Answers
+# Vuejs Interview Questions & Answers
 
-Here, we discuss about Angular Interview Questions & Answers!
+Here, we discuss about Vuejs Interview Questions & Answers!
 
 ## 
 
 <div className="interview">
-  <JITvsAOT />
+ <AppInstantvsComponent />
 </div>
 
 <div className="interview">
-  <ForRootvsForChild />
+ <LocalvsGlobalComponent />
 </div>
 
 <div className="interview">
-  <BootstrapComponentvsEntryComponent />
+ <LifeCycleHooks />
 </div>
