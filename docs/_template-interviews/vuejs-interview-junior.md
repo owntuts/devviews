@@ -7,9 +7,9 @@ tags:
   - Angular Interviews
 ---
 
-import JITvsAOT from "./basic-angular-interviews/JIT-vs-AOT.md";
-import ForRootvsForChild from "./basic-angular-interviews/forRoot-vs-forChild.md";
-import BootstrapComponentvsEntryComponent from "./basic-angular-interviews/bootstrap-component-vs-entry-component.md";
+import JITvsAOT from "./angular-interviews-junior/JIT-vs-AOT.md";
+import ForRootvsForChild from "./angular-interviews-junior/forRoot-vs-forChild.md";
+import BootstrapComponentvsEntryComponent from "./angular-interviews-junior/bootstrap-component-vs-entry-component.md";
 
 # Basic Angular Interview Questions & Answers
 
