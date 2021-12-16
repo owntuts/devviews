@@ -1,11 +1,10 @@
 ---
 sidebar_position: 3
-id: basic-angular-interview-questions-answers
-sidebar_label: Basic Angular Interview
-title: Basic Angular Interview Questions
+id: angular-interview-questions-answers-junior
+sidebar_label: Angular Interviews
+title: Angular Interview Questions and Answers
 tags:
-  - Basic Angular Interviews
-  - Angular Interview
+  - Angular Interviews
 ---
 
 import JITvsAOT from "./basic-angular-interviews/JIT-vs-AOT.md";
