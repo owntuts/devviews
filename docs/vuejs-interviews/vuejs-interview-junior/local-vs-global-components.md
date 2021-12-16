@@ -2,11 +2,10 @@
 sidebar_position: 1000
 sidebar_label: Local vs Global Components
 title: Local Components vs Global Components in VueJS
+slug: /local-components-vs-global-components-vuejs
 tags:
   - Vuejs Interviews Juniors
 ---
-
-### Local vs Global Components
 
 :::quest Question:
 

@@ -3,6 +3,7 @@ sidebar_position: 3
 id: vuejs-interview-questions-answers-junior
 sidebar_label: Vuejs Interviews
 title: Vuejs Interview Questions and Answers
+slug: /vuejs-interview-questions-answers
 tags:
   - Vuejs Interviews
 ---
@@ -18,13 +19,19 @@ Here, we discuss about Vuejs Interview Questions & Answers!
 ## 
 
 <div className="interview">
+
+  ### Vuejs instance and Vuejs component
  <AppInstantvsComponent />
 </div>
 
 <div className="interview">
+
+  ### Local vs Global Components
  <LocalvsGlobalComponent />
 </div>
 
 <div className="interview">
+
+  ### VueJS Lifecycle Hooks
  <LifeCycleHooks />
 </div>

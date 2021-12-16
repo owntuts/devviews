@@ -2,11 +2,10 @@
 sidebar_position: 1000
 sidebar_label: forRoot vs forChild
 title: Differences Between forRoot() and forChild() Patterns
+slug: /differences-forroot-forchild-patterns
 tags:
-  - Basic Angular Interviews
+  - Angular Interviews Juniors
 ---
-
-### forRoot vs forChild
 
 :::quest Question:
 

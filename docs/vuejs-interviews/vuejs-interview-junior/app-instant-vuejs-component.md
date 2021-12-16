@@ -2,11 +2,10 @@
 sidebar_position: 1000
 sidebar_label: App instance and Vuejs component
 title: Relationship Between Vuejs App Instance and Vuejs Component
+slug: /relationship-vuejs-app-instance-vuejs-component
 tags:
   - Vuejs Interviews Juniors
 ---
-
-### Vuejs instance and Vuejs component
 
 :::quest Question:
 

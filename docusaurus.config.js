@@ -36,6 +36,7 @@ const config = {
             },
             infima: true
           },
+          routeBasePath: 'interviews'
         },
         blog: {
           showReadingTime: true,
@@ -65,7 +66,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Interviews',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
