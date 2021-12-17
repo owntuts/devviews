@@ -4,7 +4,7 @@ sidebar_label: forRoot vs forChild
 title: Differences Between forRoot() and forChild() Patterns
 slug: /differences-forroot-forchild-patterns
 tags:
-  - Angular Interviews Juniors
+  - Basic Angular Interviews
 ---
 
 :::quest Question:
@@ -20,7 +20,7 @@ What is the differences between `forRoot()` and `forChild()` Patterns and what a
   \***`◔̯◔`**\* : 
   As default, lazyloaded module (feature module) can’t use Services declared in root level (see image below). To use the services, you need to import them again. This may cause bug & the imported service is not singeton (because you're sharing the service among modules).
 
-  <figure class="centerImg">
+  <figure>
 
   ![for root](/img/tutorial/angular/forroot.png)
   

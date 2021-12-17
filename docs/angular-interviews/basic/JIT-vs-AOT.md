@@ -4,7 +4,7 @@ sidebar_label: JIT vs AOT
 title: Differences Between JiT and AOT in Angular
 slug: /differences-jit-aot-angular
 tags:
-  - Angular Interviews Juniors
+  - Basic Angular Interviews
 ---
 
 :::quest Question:

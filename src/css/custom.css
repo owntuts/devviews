@@ -57,9 +57,25 @@ summary > h5 {
 }
 
 .interview {
+  --interview-border-radius: 10px;
+}
+.interview {
   background-color: var(--ifm-interview-background-color);
   padding: 15px;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: var(--interview-border-radius);
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+  position: relative;
+}
+
+.interview > .level {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #eee;
+  font-size: small;
+  color: #555;
+  border-top-right-radius: var(--interview-border-radius);
+  border-bottom-left-radius: var(--interview-border-radius);
+  padding: 0 5px 0 5px;
 }

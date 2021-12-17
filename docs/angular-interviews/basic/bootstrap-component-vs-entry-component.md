@@ -4,7 +4,7 @@ sidebar_label: Bootstrap Component vs Entry Component
 title: Difference Between Bootstrap Component and Entry component
 slug: /difference-bootstrap-component-entry-component
 tags:
-  - Angular Interviews Juniors
+  - Basic Angular Interviews
 ---
 
 :::quest Question:

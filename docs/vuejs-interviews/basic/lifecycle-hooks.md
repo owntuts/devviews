@@ -4,7 +4,7 @@ sidebar_label: VueJS Lifecycle Hooks
 title: VueJS Lifecycle Hooks Interview Question
 slug: /vuejs-lifecycle-hooks-interview-question
 tags:
-  - Vuejs Interviews Juniors
+  - Basic Vuejs Interviews
 ---
 
 :::quest Question:
