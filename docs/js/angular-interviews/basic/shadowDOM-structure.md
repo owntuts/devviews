@@ -20,7 +20,7 @@ Please describe **Shadow DOM structure**? Why Do Shadow DOMs Matter? Please give
   \***`◔̯◔`**\* : 
 ### The Structure of Shadow DOM contains:
 
-  ![Shadow DOM](/img/tutorial/angular/shadowdom.png)
+  ![Shadow DOM](/img/interviews/angular/shadowdom.png)
 
   - **Shadow host**: A regular DOM node that the shadow DOM is attached to. Browsers will render *Shadow Host* in DOM tree.
   - **Shadow tree**: DOM tree of shadow DOM behind ***Shadow host*** & all it's elements are hidden from the regular DOM tree.
@@ -49,6 +49,6 @@ Shadow DOM allows us to hide DOM logic (structure, style,...) behind other eleme
 
   The output of the shadow dom is like this:
 
-  ![Shadow DOM output](/img/tutorial/angular/shadowdomoutput.PNG)
+  ![Shadow DOM output](/img/interviews/angular/shadowdomoutput.PNG)
 
 </details>

@@ -22,7 +22,7 @@ What is **Lifecycle Hooks** in VueJS? Please tell the names & functions of each 
 
 <figure>
 
-![](/img/tutorial/vue/lifecycle.svg)
+![](/img/interviews/vue/lifecycle.svg)
 
 </figure>
 

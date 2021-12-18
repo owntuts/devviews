@@ -24,7 +24,7 @@ What is **Shadow DOM** in Angular? could you give an example about Shadow DOM? a
 
   Let's look at the video element below:
 
-  ![Shadow DOM](/img/tutorial/angular/shadowDOM-video.PNG)
+  ![Shadow DOM](/img/interviews/angular/shadowDOM-video.PNG)
 
   ```html title="Source code as well as rendered DOM"
   <video width="320" height="240" controls>

@@ -22,7 +22,7 @@ What Is **`ViewEncapsulation`** mode in Angular? What is the difference among **
 
   There are three types of `ViewEncapsulation`:
 
-  ![ViewEncapsulation types](/img/tutorial/angular/ViewEncapsulation.png)
+  ![ViewEncapsulation types](/img/interviews/angular/ViewEncapsulation.png)
 
   - **ViewEncapsulation.Native** (local scope): Each component has it's own ***native Shadow DOM***. The generated style is scoped in each shadow DOM. So,
     - Styles from main HTML do not propagate to the component.

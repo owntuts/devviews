@@ -22,7 +22,7 @@ What is the differences between `forRoot()` and `forChild()` Patterns and what a
 
   <figure>
 
-  ![for root](/img/tutorial/angular/forroot.png)
+  ![for root](/img/interviews/angular/forroot.png)
   
   <figcaption>Feature modules can't use services in root module!</figcaption>
   </figure>

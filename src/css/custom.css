@@ -77,5 +77,5 @@ summary > h5 {
   color: #555;
   border-top-right-radius: var(--interview-border-radius);
   border-bottom-left-radius: var(--interview-border-radius);
-  padding: 0 5px 0 5px;
+  padding: 0 10px 0 10px;
 }

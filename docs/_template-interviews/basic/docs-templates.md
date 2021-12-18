@@ -2,14 +2,11 @@
 sidebar_position: 1000
 sidebar_label: JIT vs AOT
 title: Differences Between JiT and AOT in Angular
+slug: /methods-vs-computed-vue
 tags:
   - Basic Angular Interviews
 ---
 
-### JIT vs AOT
-
-!!!basic docs
-[----------]::
 :::quest Question:
 
 \***`ಠ_ಠ`**\* : 
@@ -25,4 +22,3 @@ What are Differences between Just-in-Time (JiT) vs Ahead-of-Time (AoT) compilati
   - **JIT**: Just-in-time compilation, where code is compiled just before it is run in the browser.
 
 </details>
-!!!
