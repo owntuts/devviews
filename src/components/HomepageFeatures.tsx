@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
@@ -10,23 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    image: '/img/undraw_docusaurus_mountain.svg',
+    title: 'Javascript Interviews',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Javascript-shield.svg',
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/js/intro">
+          Let's start ⏱️
+        </Link>
+      </div>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    image: '/img/undraw_docusaurus_tree.svg',
+    title: 'C Sharp Interviews',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg',
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/c-sharp/intro">
+          Let's start ⏱️
+        </Link>
+      </div>
     ),
   },
   {

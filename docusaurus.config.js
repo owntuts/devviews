@@ -42,7 +42,7 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+            'https://github.com/owntuts/devviews/edit/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -69,7 +69,7 @@ const config = {
     ({
       hideableSidebar: true,
       navbar: {
-        title: 'Dev Views',
+        // title: 'Dev Views',
         logo: {
           alt: 'Dev Views',
           src: 'img/logo.svg',
@@ -83,7 +83,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/owntuts/devviews',
             label: 'GitHub',
             position: 'right',
           },
@@ -137,6 +137,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['go', 'java', 'aspnet', 'csharp'],
       },
     }),
 };

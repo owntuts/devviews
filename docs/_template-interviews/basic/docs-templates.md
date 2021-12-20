@@ -7,6 +7,8 @@ tags:
   - Basic Angular Interviews
 ---
 
+<!-- https://brandfolder.com/workbench/extract-text-from-image -->
+
 :::quest Question:
 
 \***`ಠ_ಠ`**\* : 

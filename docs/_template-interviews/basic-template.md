@@ -7,9 +7,8 @@ tags:
   - Angular Interviews
 ---
 
-import JITvsAOT from "./angular-interviews-junior/JIT-vs-AOT.md";
-import ForRootvsForChild from "./angular-interviews-junior/forRoot-vs-forChild.md";
-import BootstrapComponentvsEntryComponent from "./angular-interviews-junior/bootstrap-component-vs-entry-component.md";
+import Interview from "../_MDXComponents/Interview.mdx";
+import BoxingvsUnboxing from "./basic/boxing-vs-unboxing.md";
 
 # Basic Angular Interview Questions & Answers
 
@@ -17,14 +16,6 @@ Here, we discuss about Angular Interview Questions & Answers!
 
 ## 
 
-<div className="interview">
-  <JITvsAOT />
-</div>
-
-<div className="interview">
-  <ForRootvsForChild />
-</div>
-
-<div className="interview">
-  <BootstrapComponentvsEntryComponent />
-</div>
+<Interview level="Junior">
+  <BoxingvsUnboxing />
+</Interview>

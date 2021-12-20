@@ -7,6 +7,8 @@ tags:
   - Basic Vuejs Interviews
 ---
 
+<!-- truncate -->
+
 :::quest Question:
 
 \***`ಠ_ಠ`**\* : 
