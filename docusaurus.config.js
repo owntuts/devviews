@@ -51,29 +51,29 @@ const config = {
     ],
   ],
 
-  // plugins: [
-  //   [
-  //     '@docusaurus/plugin-content-docs',
-  //     {
-  //       id: 'nodejs-interviews',
-  //       path: 'nodejs-interviews',
-  //       routeBasePath: 'nodejs-interviews',
-  //       sidebarPath: require.resolve('./sidebars.js'),
-  //       // ... other options
-  //     },
-  //   ],
-  // ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'tutorials',
+        path: 'tutorials',
+        routeBasePath: 'tutorials',
+        sidebarPath: require.resolve('./sidebars-tutorials.js'),
+        // ... other options
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       hideableSidebar: true,
       navbar: {
-        // title: 'Dev Views',
-        logo: {
-          alt: 'Dev Views',
-          src: 'img/logo.svg',
-        },
+        title: 'Dev Views',
+        // logo: {
+        //   alt: 'Dev Views',
+        //   src: 'img/logo.svg',
+        // },
         items: [
           {
             type: 'doc',

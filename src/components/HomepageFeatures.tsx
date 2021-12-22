@@ -38,12 +38,15 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Powered by React',
-    image: '/img/undraw_docusaurus_react.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/3/37/AllAlgorithmsLogo.png',
     description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/tutorials/algorithms/intro">
+          Let's start ⏱️
+        </Link>
+      </div>
     ),
   },
 ];
