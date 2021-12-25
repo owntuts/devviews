@@ -40,9 +40,9 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
----
-https://textfac.es/
-https://www.gitploy.io/
+### License
 
-ರ_ರ
-◔̯◔
+- Copyright on any open access article in a journal published by devviews.com is retained by the author(s).
+- Authors grant devviews.com a license to publish the article and identify itself as the original publisher.
+- Authors also grant any third party the right to use the article freely as long as its integrity is maintained - and its original authors, citation details and publisher are identified.
+- The [Creative Commons Attribution License 4.0](http://creativecommons.org/licenses/by/4.0) formalizes these and other terms and conditions of publishing articles.
