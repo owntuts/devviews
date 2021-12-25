@@ -4,7 +4,7 @@ sidebar_label: Multi Provider
 title: What Is Multi Provider In Angular?
 slug: /multi-provider-angular
 tags:
-  - Basic Angular Interviews
+  - Middle Angular Interviews
 ---
 
 :::quest Question:
