@@ -20,7 +20,7 @@ What Is **Eager Loading**, **Lazy Loading**, and **Pre-Loading** in Angular?
   \***`◔̯◔`**\* : 
   **Eager Loading**, **Lazy Loading**, and **Pre-Loading** are loading strategies in Angular.
   
-  - **Eager Loading**: A feature module will be imported & loaded before the application starts -> So, We should ***use **Eager Loading** to load core modules*** -> and usually ***come with `forRoot` pattern***.
+  - **Eager Loading**: A feature module or a component will be imported & loaded before the application starts -> So, We should ***use **Eager Loading** to load core modules*** -> and usually ***come with `forRoot` pattern***.
   - **Lazy Loading**: A feature module will be loaded on demand after the application starts -> and usually ***come with `forChild` pattern***.
   - **Pre-Loading**: A feature module will be loaded automatically after the application starts: like lazy loading except `applyPreload` option.
 
@@ -31,25 +31,27 @@ What Is **Eager Loading**, **Lazy Loading**, and **Pre-Loading** in Angular?
     { path: '', redirectTo: 'eager-loading', pathMatch: 'full' }, 
     { 
       path: 'eager-loading', 
-      component: EagerHomeComponent, 
+      component: EagerLoadedComponent, 
       children: [
-        { path: '', redirectTo: 'childl', pathMatch: 'full' }, 
-        { path: 'childl', component: EagerChildComponent }, 
-        { path: 'child2', component: EagerChild2Component },
-        { path: '**', redirectTo: 'childl' } 
+        { path: 'eager-child', component: EagerChildComponent }, 
       ]
     }, 
     { 
       path: 'lazy-loading', 
-      loadChildren:'./features/lazy-loading-module/lazy-loading.module#LazyLoadingModule' 
+      loadChildren: () => import('./lazy-loading.module').then(m => m.LazyLoadingModule)
     }, 
     { 
       path: 'pre-loading', 
-      loadChildren: './features/pre-loading-module/pre-loading.module#PreLoadingModule', 
+      loadChildren: () => import('./pre-loading.module').then(m => m.PreloadingModule),
       data: { applyPreload: true } 
     }, 
-    { path: '**', redirectTo: reager-loading' } 
   ];
+
+  class CustomPreloadingStrategy implements PreloadingStrategy {
+    preload(route: Route, loadModule: Function): Observable<any> {
+      return route.data && route.data.applyPreload ? loadModule() : of(null);
+    }
+  }
 
   @NgModule({
     imports: [
