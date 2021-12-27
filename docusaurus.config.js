@@ -9,7 +9,7 @@ const config = {
   title: 'Dev Views',
   tagline: 'Intervew Developers Questions and Answers',
   // url: 'https://devviews.github.io/',
-  url: 'http://devviews.com/',
+  url: 'http://devviews.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
