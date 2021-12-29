@@ -42,7 +42,5 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 ### License
 
-- Copyright on any open access article in a journal published by devviews.com is retained by the author(s).
-- Authors grant devviews.com a license to publish the article and identify itself as the original publisher.
-- Authors also grant any third party the right to use the article freely as long as its integrity is maintained - and its original authors, citation details and publisher are identified.
-- The [Creative Commons Attribution License 4.0](http://creativecommons.org/licenses/by/4.0) formalizes these and other terms and conditions of publishing articles.
+Copyright © 2021-2022 DevViews. All rights reserved.
+

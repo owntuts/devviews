@@ -148,7 +148,7 @@ const config = {
           //   ],
           // },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Devviews.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Devviews. All rights reserved.`,
       },
       prism: {
         theme: lightCodeTheme,
