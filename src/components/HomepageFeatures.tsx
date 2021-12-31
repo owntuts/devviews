@@ -37,13 +37,26 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'ReactJS Interviews',
     image: 'https://upload.wikimedia.org/wikipedia/commons/3/37/AllAlgorithmsLogo.png',
     description: (
       <div className={styles.buttons}>
         <Link
           className="button button--secondary button--sm"
           to="/tutorials/algorithms/intro">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: 'NestJS Interviews',
+    image: 'https://docs.nestjs.com/assets/logo-small.svg',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/nodejs/intro">
           Let's start ⏱️
         </Link>
       </div>
