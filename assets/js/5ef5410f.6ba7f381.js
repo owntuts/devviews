@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkinterviewdev=self.webpackChunkinterviewdev||[]).push([[6731],{8589:function(e){e.exports=JSON.parse('[{"name":"Sort Algorithms","permalink":"/tutorials/tags/sort-algorithms","count":3}]')}}]);
