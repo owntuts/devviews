@@ -37,7 +37,20 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'ReactJS Interviews',
+    title: 'NestJS Interviews',
+    image: 'https://docs.nestjs.com/assets/logo-small.svg',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/nodejs/intro">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: 'Algorithms Tutorials',
     image: 'https://upload.wikimedia.org/wikipedia/commons/3/37/AllAlgorithmsLogo.png',
     description: (
       <div className={styles.buttons}>
@@ -50,13 +63,13 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'NestJS Interviews',
-    image: 'https://docs.nestjs.com/assets/logo-small.svg',
+    title: 'Data Structure Tutorials',
+    image: 'https://www.inventicons.com/uploads/iconset/1626/wm/512/data-structure-10.png',
     description: (
       <div className={styles.buttons}>
         <Link
           className="button button--secondary button--sm"
-          to="/interviews/nodejs/intro">
+          to="/tutorials/data-structures/intro">
           Let's start ⏱️
         </Link>
       </div>
