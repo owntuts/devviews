@@ -50,6 +50,19 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'CSS Interviews',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/CSS-interview-questions-answers">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: 'Algorithms Tutorials',
     image: 'https://upload.wikimedia.org/wikipedia/commons/3/37/AllAlgorithmsLogo.png',
     description: (
