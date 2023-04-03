@@ -37,6 +37,19 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'Java Interviews',
+    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/182px-Java_programming_language_logo.svg.png',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/java/intro">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: 'NestJS Interviews',
     image: 'https://docs.nestjs.com/assets/logo-small.svg',
     description: (
