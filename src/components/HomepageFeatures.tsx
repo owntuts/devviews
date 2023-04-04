@@ -50,6 +50,19 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'React Native Interviews',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/react-native/intro">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: 'NestJS Interviews',
     image: 'https://docs.nestjs.com/assets/logo-small.svg',
     description: (
