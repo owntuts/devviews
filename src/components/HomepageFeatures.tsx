@@ -63,6 +63,19 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'PHP Interviews',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/php/intro">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: 'NestJS Interviews',
     image: 'https://docs.nestjs.com/assets/logo-small.svg',
     description: (
