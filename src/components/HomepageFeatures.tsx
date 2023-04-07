@@ -76,6 +76,19 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'Kotlin Interviews',
+    image: 'https://kotlinlang.org/docs/images/kotlin-logo.png',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/kotlin/intro">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: 'NestJS Interviews',
     image: 'https://docs.nestjs.com/assets/logo-small.svg',
     description: (
