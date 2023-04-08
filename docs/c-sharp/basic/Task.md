@@ -10,7 +10,7 @@ tags:
 :::quest Question:
 
 \***`ಠ_ಠ`**\* : 
-What is `Task` in C#?
+What is `Task` in C#?  `.Result` vs`.Wait()`?
 
 :::
 
@@ -55,6 +55,6 @@ public class Example {
 
 ```
 
-
+The difference from calling .Result or .Wait() is that the await keyword sends the current thread back to the thread pool, instead of keeping it in a blocked state.
 
 </details>
