@@ -102,6 +102,19 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'Django Interviews',
+    image: 'https://static.djangoproject.com/img/logos/django-logo-positive.svg',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/django/intro">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: 'CSS Interviews',
     image: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg',
     description: (
