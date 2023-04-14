@@ -102,6 +102,45 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'HELM GraphQL Interviews',
+    image: 'https://helm.sh/img/helm.svg',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/helm/helm-from-zero-to-hero">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: 'Terraform Interviews',
+    image: 'https://www.datocms-assets.com/2885/1533837667-hashicorpverticallogowhite.svg',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/helm/helm-from-zero-to-hero">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: 'HELM GraphQL Interviews',
+    image: 'https://helm.sh/img/helm.svg',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/helm/helm-from-zero-to-hero">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: 'NestJS Interviews',
     image: 'https://docs.nestjs.com/assets/logo-small.svg',
     description: (
