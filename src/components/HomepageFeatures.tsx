@@ -116,12 +116,12 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Terraform Interviews',
-    image: 'https://www.datocms-assets.com/2885/1533837667-hashicorpverticallogowhite.svg',
+    image: 'https://www.vectorlogo.zone/logos/terraformio/terraformio-ar21.svg',
     description: (
       <div className={styles.buttons}>
         <Link
           className="button button--secondary button--sm"
-          to="/interviews/helm/helm-from-zero-to-hero">
+          to="/interviews/terraform/hero">
           Let's start ⏱️
         </Link>
       </div>
