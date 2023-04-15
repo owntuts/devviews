@@ -128,13 +128,39 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'HELM GraphQL Interviews',
-    image: 'https://helm.sh/img/helm.svg',
+    title: 'Kafka Interviews',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Apache_kafka_wordtype.svg/180px-Apache_kafka_wordtype.svg.png',
     description: (
       <div className={styles.buttons}>
         <Link
           className="button button--secondary button--sm"
-          to="/interviews/helm/helm-from-zero-to-hero">
+          to="/interviews/kafka/kafka-from-zero-to-hero">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: 'Docker Interviews',
+    image: 'https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.png',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/docker/docker-from-zero-hero">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: 'Kubernetes Interviews',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kubernetes_logo.svg/1200px-Kubernetes_logo.svg.png',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/kubernetes/kubernetes-from-zero-to-hero">
           Let's start ⏱️
         </Link>
       </div>
