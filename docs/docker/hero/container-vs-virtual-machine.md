@@ -27,4 +27,6 @@ tags:
 | Security | Lower | Higher |
 | Compatibility | Limited | High |
 
+Containers are isolated environments that contain everything needed to run an application, such as code, libraries, dependencies, and configuration files. Containers are lightweight and portable, which makes them ideal for deploying applications across different environments.
+
 </details>
