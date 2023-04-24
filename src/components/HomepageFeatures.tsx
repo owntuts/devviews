@@ -180,6 +180,19 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'Socket.IO Interviews',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Socket-io.svg/900px-Socket-io.svg.png?20200308235956',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/socketio/socketio-zero-to-hero">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: 'Django Interviews',
     image: 'https://static.djangoproject.com/img/logos/django-logo-positive.svg',
     description: (
