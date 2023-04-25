@@ -43,7 +43,7 @@ const FeatureList: FeatureItem[] = [
       <div className={styles.buttons}>
         <Link
           className="button button--secondary button--sm"
-          to="/interviews/java/intro">
+          to="/interviews/java/java-zero-to-hero">
           Let's start ⏱️
         </Link>
       </div>
