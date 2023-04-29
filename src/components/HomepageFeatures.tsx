@@ -24,6 +24,19 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'Design System',
+    image: 'https://images.ctfassets.net/7jw9uvgmirvi/3lVaxIcw1W8GiOhuNMCmJh/716d60166db1590ef27dc8918918b5b2/Group_102.png',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/system-design/design-system">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: 'C Sharp Interviews',
     image: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg',
     description: (
