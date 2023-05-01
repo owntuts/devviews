@@ -108,7 +108,7 @@ const FeatureList: FeatureItem[] = [
       <div className={styles.buttons}>
         <Link
           className="button button--secondary button--sm"
-          to="/interviews/apollographql/intro">
+          to="/interviews/apollographql/apollojs-client-zero-hero">
           Let's start ⏱️
         </Link>
       </div>
