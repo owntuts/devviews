@@ -11,7 +11,6 @@ import Interview from "../_MDXComponents/Interview.mdx";
 
 # Javascript
 
-Here, we discuss about Angular Interview Questions & Answers!
 
 ## 
 <!-- 
@@ -21,6 +20,95 @@ Here, we discuss about Angular Interview Questions & Answers!
 
 <!-- ### Directory Structure
 <BoxingvsUnboxing /> -->
+
+
+### Order of Hoisting
+
+<details open>
+<summary><h5>Order of Hoisting</h5></summary>
+
+According to the **ECMAScript 5 specification**, the order of hoisting in JavaScript is as follows:
+
+- **Function declarations** are hoisted first, with their name and value (the function body).
+- **Variable declarations** are hoisted next, with their name only. The initialization (if any) is not hoisted.
+- If a variable name is already taken by a function declaration, the variable declaration is ignored.
+
+#### Example 1:
+
+```javascript
+console.log(foo); // logs the function foo
+console.log(bar); // logs undefined
+foo(); // calls the function foo
+bar(); // throws a TypeError: bar is not a function
+
+function foo() {
+  console.log("Hello");
+}
+
+var bar = function() {
+  console.log("World");
+};
+```
+
+This code is equivalent to:
+
+```javascript
+function foo() { // function declaration is hoisted first
+  console.log("Hello");
+}
+
+var bar; // variable declaration is hoisted next, but not the initialization
+
+console.log(foo); // logs the function foo
+console.log(bar); // logs undefined
+foo(); // calls the function foo
+bar(); // throws a TypeError: bar is not a function
+
+bar = function() { // variable initialization happens here
+  console.log("World");
+};
+```
+
+#### Example 2:
+
+```js
+var double = 22;
+function double(num) {
+  return (num*2);
+}
+console.log(typeof double);
+```
+The equivalent of this code in runtime is:
+
+```javascript
+function double(num) { // function declaration is hoisted to the top
+  return (num*2);
+}
+var double; // variable declaration is hoisted to the top, but not the initialization
+double = 22; // variable is initialized with the value 22
+console.log(typeof double); // logs "number" 
+```
+#### Example 3:
+
+```js
+var double;
+function double(num) {
+ return (num*2);
+}
+console.log(typeof double);
+```
+
+The equivalent of this code in runtime is:
+
+```javascript
+function double(num) { // function declaration is hoisted to the top
+ return (num*2);
+}
+var double; // variable declaration is hoisted to the top next
+console.log(typeof double); // logs "function" because variable initialization haven't happened yet
+```
+
+</details>
 
 ### Symbol
 

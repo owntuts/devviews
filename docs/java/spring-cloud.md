@@ -7,8 +7,10 @@ title: Spring Cloud Zero To Hero
 
 import Interview from "../_MDXComponents/Interview.mdx";
 import Architecture from "./_spring-cloud/architecture.md";
+import Eureka from "./_spring-cloud/eureka.md";
+import EurekaFeign from "./_spring-cloud/eureka-feign.md";
 
-# Basic Angular Interview Questions & Answers
+# Spring Cloud Zero To Hero
 
 Here, we discuss about Angular Interview Questions & Answers!
 
@@ -20,3 +22,7 @@ Here, we discuss about Angular Interview Questions & Answers!
 
 ### Architecture
 <Architecture />
+
+### How Eureka Works
+<Eureka />
+<EurekaFeign />

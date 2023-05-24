@@ -12,11 +12,26 @@ tags:
 <details open>
 <summary><h5>single-thread vs multi-threads vs concurrency vs paralell in Nodejs</h5></summary>
 
-Single-thread, multi-threads, concurrency, and parallelism in simple words.
+* **Single-thread:** A single-thread is like a single person doing a task. For example, ***a single person cooking a meal***. The person can only focus on one task at a time, and the meal will take longer to cook if the person is not very efficient.
+* **Concurrency:** Concurrency is like multiple people doing different tasks at the same time. For example, ***a group of people cooking different meals***. The people are not working together, but they are all doing something at the same time.
+* **Multi-thread:** A multi-thread is like multiple people doing a task together. For example, ***a group of people cooking a meal***. The people can focus on different tasks at the same time, and the meal will cook faster if the people are efficient.
+> Multithreading is a way to achieve concurrency in software development. Concurrency is the ability to run multiple tasks or processes at the same time, and ***multithreading is a specific approach to implementing concurrency*** by dividing a program into multiple threads of execution that can run concurrently.
+> Here is an example of how multithreading can be used to improve the performance of a request-response system:
+> - A web server receives requests from multiple clients.
+> - The server divides the requests into multiple tasks.
+> - The server assigns each task to a different thread.
+> - The threads execute the tasks concurrently.
+> - The server returns the results of the tasks to the clients.
+* **Parallelism:** Parallelism is like multiple people doing the same task at the same time. For example, ***a group of people running a race***. The people are all working towards the same goal, and they are all doing it at the same time.
+> Consider a web server that receives requests from multiple clients. If the server only has one processor, it can only process one request at a time. However, if the server has multiple processors, it can process multiple requests simultaneously. This can be done by ***dividing the requests into multiple tasks and assigning each task to a different processor***.
 
-- **Single-thread**: Imagine you are a waiter in a small restaurant. ***You have to serve one table of customers at a time***. You can only do one thing at a time, like taking orders, bringing food, or collecting bills. You don't share any resources with anyone else. You are doing single-thread, running one task at a time.
-- **Multi-threads**: Imagine you are a waiter in a bigger restaurant. ***You have to serve multiple tables of customers***. Each table is like a thread, a separate task that you have to do. You can switch between tables and do different things for them, like taking orders, bringing food, or collecting bills. You share some resources with other waiters, like the kitchen or the cash register.
-- **Concurrency**: Imagine you are the only waiter in a busy restaurant. ***You have to serve multiple tables of customers at the same time***. You can't be at two places at once, so you have to divide your time and attention between them. You are doing concurrency, handling multiple tasks that overlap in time. Sometimes you have to wait for something, like the food to be ready or the customer to pay. While you are waiting, you can do something else for another table.
-- **Parallelism**: Imagine you have some helpers in the restaurant. ***They can help you with some tasks***, like taking orders or bringing food. They can work at the same time as you, using different parts of the restaurant. You are doing parallelism, executing multiple tasks simultaneously. You can serve more customers faster and more efficiently with their help.
+Here is a table that summarizes the differences between single-thread, multi-thread, concurrency, and parallel:
+
+| Feature | Single-thread | Multi-thread | Concurrency | Parallelism |
+|---|---|---|---|---|
+| Number of tasks | 1 | Multiple | Multiple | Multiple |
+| Focus | One task at a time | Different tasks at the same time | Different tasks at the same time | Same task at the same time |
+| Speed | Slow | Faster | Faster | Fastest |
+| Example | A single person cooking a meal | A group of people cooking a meal | A group of people cooking different meals | A group of people running a race |
 
 </details>

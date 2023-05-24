@@ -24,5 +24,8 @@ import Threadsvs from "./nodejs/threadsvs.md";
 ### Nodejs Cluster
 <Cluster />
 
+### Worker Thread
+<WorkerThread />
+
 ### Worker Thread vs Cluster
 <WorkerThreadCluster />
