@@ -8,7 +8,7 @@ tags:
 ---
 
 <!-- https://brandfolder.com/workbench/extract-text-from-image -->
-<!-- ![for root](/img/interviews/angular/forroot.png) -->
+<!-- ![event-propagation-illustration](/img/interviews/js/event-propagation-illustration.png) -->
 
 :::quest Question:
 

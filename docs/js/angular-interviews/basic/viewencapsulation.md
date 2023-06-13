@@ -28,7 +28,7 @@ What Is **`ViewEncapsulation`** mode in Angular? What is the difference among **
     - Styles from main HTML do not propagate to the component.
     - Styles of component do not apply to all children.
     - Styles of component do not affect to the global styles.
-  - **ViewEncapsulation.Emulated** (local scope): The Emulated mode is ***the default one***. Each component has it's own ***simulated Shadow DOM*** (use it for browser doesn't support shadow DOM natively). The style scope is similar to `ViewEncapsulation.Native` mode.
+  - **ViewEncapsulation.Emulated** (local scope): The Emulated mode is ***the default one***. Each component has it's own ***simulated Shadow DOM*** (use it for browser doesn't support shadow DOM natively). The style scope is similar to `ViewEncapsulation.Native` mode but styles from the main HTML propagate to the component.
   - **ViewEncapsulation.None** (global scope): The style of component will be rendered in style tag in the header of html => It's visible to all components and so apply to all children too.
 
 :::note
