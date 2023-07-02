@@ -18,8 +18,15 @@ import FlexboxvsGrid from "./basic/Flexbox-vs-Grid.md";
 import CssPositioning from "./basic/css-positioning.md";
 import BlockvsInline from "./basic/block-vs-inline.md";
 import CssCounter from "./basic/css-counter.md";
+import BFC from "./basic/_BFC.md";
 
 Here, we discuss about CSS Interview Questions & Answers!
+
+<Interview>
+
+  ### BFC
+  <BFC />
+</Interview>
 
 <Interview level="Junior">
 
