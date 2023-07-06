@@ -356,5 +356,38 @@ class Example {
 | Thread-Safety | Not thread-safe as it is not synchronized | Not thread-safe as it is not synchronized | Thread-safe as it is synchronized on the whole map | Not thread-safe as it is not synchronized |
 | Fail-Fast Behavior | Iterator is fail-fast (throws ConcurrentModificationException) but cannot be guaranteed in the presence of unsynchronized concurrent modification | Iterator is fail-fast (throws ConcurrentModificationException) but cannot be guaranteed in the presence of unsynchronized concurrent modification Iterator is fail-fast (throws ConcurrentModificationException) but cannot be guaranteed in the presence of unsynchronized concurrent modification |  |  |
 
+</details>
+
+<details>
+<summary><h5>String	vs StringBuilder vs StringBuffer</h5></summary>
+
+| String | StringBuilder | StringBuffer |
+|--------|---------------|--------------|
+| string constant pool | heap | heap |
+| Immutable | Mutable | Mutable |
+| Not thread-safe | Thread-safe but not synchronized | Thread-safe and synchronized |
+| Fast for simple operations | Slow for simple operations | Slow for simple operations |
+| Slow for complex operations | Fast for complex operations | Fast for complex operations |
+
+The value of String, StringBuilder, and StringBuffer is stored in different areas of memory depending on how they are created and used. Generally, the following rules apply:
+
+- String literals, such as `"Hello"`, are stored in the **string constant pool**, which is a special area of the heap memory that stores unique strings that are referenced by the code. The string constant pool helps to save memory and improve performance by reusing the same string objects for multiple references.
+- String objects, such as `new String("Hello")`, are stored in the **normal heap**, which is the area of the heap memory that stores regular objects that are created by the `new` keyword. The normal heap is subject to garbage collection, which means that unused objects can be reclaimed by the system to free up memory.
+- StringBuilder and StringBuffer objects, such as `new StringBuilder("Hello")` or `new StringBuffer("Hello")`, are also stored in the **normal heap**, but they have an internal **character array** that stores the actual character sequence. The character array can be modified by methods such as `append`, `insert`, `delete`, etc. without creating a new object.
+
+Here is an example of how String, StringBuilder, and StringBuffer are stored in memory:
+
+```java
+// Creating a string literal
+String s1 = "Hello"; // Stored in the string constant pool
+// Creating another string literal with the same value
+String s2 = "Hello"; // Referencing the same object in the string constant pool
+// Creating a string object with the same value
+String s3 = new String("Hello"); // Stored in the normal heap
+// Creating a string builder object with the same value
+StringBuilder sb = new StringBuilder("Hello"); // Stored in the normal heap with an internal character array
+// Creating a string buffer object with the same value
+StringBuffer sbf = new StringBuffer("Hello"); // Stored in the normal heap with an internal character array
+```
 
 </details>
