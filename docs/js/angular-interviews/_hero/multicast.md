@@ -107,8 +107,8 @@ There are two main ways to multicast in RxJS:
 
     ```
 * **Using ConnectableObservable with refCount():** is to simplify the process of managing the subscription to a **ConnectableObservable**.
-- The **refCount** operator ***tracks the number of subscribers*** to a **ConnectableObservable** 
-- Automatically ***connects it when the first subscriber subscribes and disconnects it when the last subscriber unsubscribes***.
+    - The **refCount** operator ***tracks the number of subscribers*** to a **ConnectableObservable** 
+    - Automatically ***connects it when the first subscriber subscribes and disconnects it when the last subscriber unsubscribes***.
 
     ```js
     // import { interval, Subject } from 'rxjs';

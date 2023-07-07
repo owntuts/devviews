@@ -18,6 +18,37 @@ Python has several built-in data types that can be used to store and manipulate 
 
 </details>
 
+<details>
+<summary><h5>mutable and immutable data type in python</h5></summary>
+
+- **Mutable data types**: These are data types that can be changed after they are created. Examples are list, set, dictionary, bytearray, etc.
+- **Immutable data types**: These are data types that cannot be changed after they are created. Examples are int, float, string, tuple, bool, bytes, etc.
+
+</details>
+
+<details>
+<summary><h5>Arrays vs lists</h5></summary>
+
+| Feature | Array | List |
+|---------|-------|------|
+| Built-in | No, need to import | Yes |
+| Data type | Homogeneous | Heterogeneous |
+| Arithmetic operations | Supported | Not supported |
+| Sequence length | Preferred for longer | Preferred for shorter |
+| Flexibility and modification | Less | More |
+
+```python
+import array
+a = array.array('i', [1, 2, 3])
+for i in a:
+    print(i, end=' ')    #OUTPUT: 1 2 3
+a = array.array('i', [1, 2, 'string'])    #OUTPUT: TypeError: an integer is required (got type str)
+a = [1, 2, 'string']
+for i in a:
+   print(i, end=' ')    #OUTPUT: 1 2 string
+```
+
+</details>
 
 <details>
 <summary><h5>list vs tuple vs range</h5></summary>

@@ -2,6 +2,7 @@ import Interview from "../_MDXComponents/Interview.mdx";
 import HowPythonWorks from "./_hero/how-it-works.md";
 import DataStructures from "./_hero/data-structures.md";
 import Scope from "./_hero/scope.md";
+import Functional from "./_hero/functional.md";
 
 # Python Zero To Hero
 
@@ -19,3 +20,6 @@ import Scope from "./_hero/scope.md";
 
 ### Scope
 <Scope />
+
+### Functional
+<Functional />

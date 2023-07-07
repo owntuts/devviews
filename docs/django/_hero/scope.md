@@ -180,3 +180,60 @@ Output:
 
 </details>
 
+
+<details>
+<summary><h5>namespace vs scope</h5></summary>
+
+***A namespace is a collection*** of names and objects, while ***a scope is a region of code*** where a name is visible and accessible. A scope can contain one or more namespaces, and a namespace can belong to one or more scopes.
+
+Like scope, Python has four types of namespaces: **built-in**, **global**, **enclosing**, and **local**. These are also known as **LEGB** scopes, based on their initials.
+
+You can think of a namespace as a dictionary in which the keys are the object names and the values are the objects themselves. Each key-value pair maps a name to its corresponding object. For example:
+
+```python
+# create a namespace dictionary
+namespace = {}
+
+# assign some names to objects
+namespace["x"] = 10
+namespace["y"] = 20
+namespace["foo"] = lambda x: x * x
+
+# print the namespace dictionary
+print(namespace)
+
+```
+
+Output
+
+```
+{'x': 10, 'y': 20, 'foo': <function <lambda> at 0x7f9a8c0c1f70>}
+```
+
+A scope is like a region or area where you can use the dictionary to access the objects. A scope determines which dictionary is searched for a name when it is used in a program.
+
+```python
+# create a global dictionary
+global_dict = {"x": 10, "y": 20}
+
+# define a function
+def foo():
+    # create a local dictionary
+    local_dict = {"x": 30, "z": 40}
+    # print the local name x
+    print(local_dict["x"])
+    # print the global name y
+    print(global_dict["y"])
+    # print the local name z
+    print(local_dict["z"])
+
+# call the function
+foo()
+
+# print the global name x
+print(global_dict["x"])
+
+```
+
+</details>
+

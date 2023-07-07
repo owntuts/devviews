@@ -68,7 +68,7 @@ const subscriber = subject.subscribe(reader);
 | ----------- | -------- |
 | A stream of events that can be processed with operators | A single event that happens when an async operation completes or fails |
 | Can be either synchronous or asynchronous | Always asynchronous |
-| Can provide zero or more values | Can provide a single value |
+| Can provide zero or more values | Can provide a single value because they can only be resolved or rejected once |
 | Only start when subscribed to | Start immediately when created |
 | Can be cancelled by unsubscribing | Cannot be cancelled |
 
