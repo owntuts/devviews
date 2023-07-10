@@ -400,3 +400,59 @@ t2.start();
 t3.start();
 ```
 </details>
+
+<details>
+<summary><h5>ExecutorService</h5></summary>
+
+`ExecutorService` in Java is an interface that provides methods to manage the execution of asynchronous tasks on threads. It is part of the `java.util.concurrent` package, which contains classes and interfaces for concurrent programming. `ExecutorService` helps in ***creating and managing a pool of threads, and assigning tasks to them***. 
+
+- You can **create** an `ExecutorService` instance by using one of the factory methods of the Executors class, or by using a specific implementation such as `ThreadPoolExecutor` or `ForkJoinPool`. 
+
+- You can **assign tasks** to the `ExecutorService` using methods such as `execute()`, `submit()`, `invokeAll()` or `invokeAny()`. These methods can accept `Runnable` or `Callable` objects, which represent the tasks to be executed. You can also use `Future` or `CompletableFuture` objects to get the result or status of the tasks. 
+
+- You can **shut down** the `ExecutorService` when you don’t need it anymore, by using methods such as `shutdown()` or `shutdownNow()`.
+
+Here is an example of how to use ExecutorService in Java:
+
+```java
+import java.util.concurrent.*;
+
+public class ExecutorServiceExample {
+
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
+        // Create an executor service with 4 threads
+        ExecutorService executor = Executors.newFixedThreadPool(4);
+
+        // Create a runnable task that prints "Hello World"
+        Runnable task = () -> {
+            System.out.println("Hello World");
+        };
+
+        // Submit the task to the executor service 10 times
+        for (int i = 0; i < 10; i++) {
+            executor.submit(task);
+        }
+
+        // Shutdown the executor service gracefully
+        executor.shutdown();
+    }
+}
+```
+
+This code will output something like this:
+
+```
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+```
+
+You can see that the executor service executes the task 10 times on 4 threads, and then shuts down. This is the benefit of using `ExecutorService` in Java.
+</details>

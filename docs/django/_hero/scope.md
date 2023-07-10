@@ -57,6 +57,19 @@ NameError: name 'x' is not defined
 </details>
 
 <details>
+<summary><h5>modules vs packages</h5></summary>
+
+| Module | Package |
+|--------|---------|
+| A file containing Python code | A directory containing modules and sub-packages |
+| Has a name that matches the file name without the .py extension | Has a name that matches the directory name |
+| Has a namespace that matches the module name | Has a namespace that matches the package name |
+| Can define any number of classes, functions and variables | Can only expose classes, functions and variables through its __init__.py file or its sub-packages |
+| Can be imported using `import <module_name>` | Can be imported using `import <package_name>` or `from <package_name>` `import <sub-package or module>` |
+
+</details>
+
+<details>
 <summary><h5>Rules of Scope</h5></summary>
 
 - Python follows a set of rules to determine which scope a name belongs to and how to resolve any name conflicts. These rules are based on the LEGB order of scopes, ***from innermost to outermost***.

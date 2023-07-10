@@ -120,6 +120,42 @@ thread.start();
 </details>
 
 <details>
+<summary><h5>Callable</h5></summary>
+
+`Callable` is an interface that represents a task that can be executed by a thread in Java. It has a single method `call()` that defines the logic of the task and returns a value or throws an exception.
+
+Some of the features and benefits of using Callable are:
+
+- `Callable` is a generic interface, so it can accept and return any type of value. It is suitable for tasks that need to produce a result or handle a checked exception.
+- `Callable` was introduced in Java 1.5 as an ***improvement over `Runnable`***, which does not return any value or throw any checked exception.
+- `Callable` instances can be combined with `Future` and `FutureTask` classes to obtain the result of the task asynchronously and cancel the task if needed.
+
+Here is an example of creating and running a Callable task using a lambda expression:
+
+```java
+// Create a Callable task
+Callable<Integer> task = () -> {
+    // Do some work
+    return 42;
+};
+
+// Run the task using an ExecutorService
+ExecutorService executor = Executors.newSingleThreadExecutor();
+Future<Integer> future = executor.submit(task);
+executor.shutdown();
+
+// Get the result of the task
+try {
+    Integer result = future.get();
+    System.out.println("Result: " + result);
+} catch (InterruptedException | ExecutionException e) {
+    e.printStackTrace();
+}
+```
+
+</details>
+
+<details>
 <summary><h5>Function</h5></summary>
 
 `Function<T,R> `functional interface in Java is an interface that represents a function that accepts one argument of type T and produces a result of type R.

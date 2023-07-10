@@ -50,6 +50,19 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'PostgresQL',
+    image: 'https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg',
+    description: (
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--sm"
+          to="/interviews/postgresql/postgresql-from-zero-to-hero">
+          Let's start ⏱️
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: 'C Sharp Interviews',
     image: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg',
     description: (

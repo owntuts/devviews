@@ -19,6 +19,7 @@ import FuntionalInterface from "./hero/funtional-interface.md";
 import OOP from "./hero/OOP.md";
 import Exceptions from "./hero/exceptions.md";
 import Thread from "./hero/thread.md";
+import Concurrency from "./hero/concurrency.md";
 
 # Java From Zero To Hero
 
@@ -51,6 +52,9 @@ import Thread from "./hero/thread.md";
 
 ### Thread Safety
 <ThreadSafety />
+
+### Concurrency
+<Concurrency />
 
 ### Funtional Interface
 <FuntionalInterface />
