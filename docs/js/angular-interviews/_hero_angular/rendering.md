@@ -87,3 +87,102 @@ The impure pipe will be executed whenever the change detection cycle runs, regar
 
 </details>
 
+<details>
+<summary><h5>@ViewChild, @ViewChildren</h5></summary>
+
+@ViewChild and @ViewChildren are decorators that allow you to access the child elements or components of a parent component. They are useful when you need to manipulate the DOM elements or communicate with the child components.
+
+The arguments of @ViewChild and @ViewChildren are:
+
+- The first argument is the **selector** of the element or component to query. It can be one of the following types:
+  - A **string** that matches the name of a local template variable, a directive type, or a component type.
+  - A **function** that returns the directive or component type.
+  - A **template reference variable** as an expression, such as `#myVar` or `ref-myVar`.
+- The second argument is an **options object** that has the following properties:
+  - **read**: This property specifies what token should be read from the queried element or component. For example, you can use `read: ElementRef` to get the `ElementRef` instance of the element, or `read: ViewContainerRef` to get the `ViewContainerRef` instance of the element. If you omit this property, Angular will try to infer the best option based on the selector type.
+  - **static**: This property indicates whether the query should be resolved before change detection runs. If set to `true`, the query will be ***resolved once and not updated later***. If set to `false`, the query will be ***resolved after change detection runs, and updated if the query results change***. This property is only available for @ViewChild, not for @ViewChildren.
+
+Here are some examples of how to use @ViewChild and @ViewChildren with different arguments:
+
+- Using @ViewChild with a string selector and no options object:
+
+```ts
+import { Component, ViewChild } from '@angular/core';
+import { ChildComponent } from './child.component';
+
+@Component({
+  selector: 'app-parent',
+  template: `
+    <h2>Parent Component</h2>
+    <app-child></app-child>
+  `,
+})
+export class ParentComponent {
+  // Get a reference to the child component by its type
+  @ViewChild(ChildComponent) child: ChildComponent;
+
+  ngAfterViewInit() {
+    // Access the child component properties or methods
+    console.log(this.child.message); // Hello from child
+    this.child.greet(); // Greet from child
+  }
+}
+```
+
+- Using @ViewChild with a template reference variable and an options object:
+
+```ts
+import { Component, ViewChild, ElementRef } from '@angular/core';
+
+@Component({
+  selector: 'app-parent',
+  template: `
+    <h2>Parent Component</h2>
+    <div #myDiv>Some content</div>
+  `,
+})
+export class ParentComponent {
+  // Get a reference to the div element by its template reference variable
+  // Specify that we want to read its ElementRef instance
+  @ViewChild('myDiv', { read: ElementRef }) myDiv: ElementRef;
+
+  ngAfterViewInit() {
+    // Access the native element of the div
+    console.log(this.myDiv.nativeElement); // <div _ngcontent-c0>Some content</div>
+  }
+}
+```
+
+- Using @ViewChildren with a function selector and no options object:
+
+```ts
+import { Component, ViewChildren, QueryList } from '@angular/core';
+import { Pane } from './pane.directive';
+
+@Component({
+  selector: 'app-parent',
+  template: `
+    <h2>Parent Component</h2>
+    <div pane id="1">Pane 1</div>
+    <div pane id="2">Pane 2</div>
+    <div pane id="3">Pane 3</div>
+  `,
+})
+export class ParentComponent {
+  // Get a list of references to the elements with the pane directive
+  // Use a function that returns the directive type as the selector
+  @ViewChildren(Pane) panes: QueryList<Pane>;
+
+  ngAfterViewInit() {
+    // Iterate over the elements with the pane directive
+    this.panes.forEach((pane) => {
+      // Access the pane directive properties or methods
+      console.log(pane.id); // 1, then 2, then 3
+      pane.doSomething(); // Do something with each pane
+    });
+  }
+}
+```
+
+</details>
+

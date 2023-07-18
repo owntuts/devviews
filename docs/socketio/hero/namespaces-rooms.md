@@ -66,6 +66,9 @@ On the client side, you need to connect to the specific namespace and room you w
 // connect to the sports namespace
 var sports = io('/sports');
 
+// Send a message to the server requesting to join the soccer room
+// socket.emit('join', 'soccer');
+
 // listen for messages from the server
 sports.on('message', function(data) {
   console.log(data);

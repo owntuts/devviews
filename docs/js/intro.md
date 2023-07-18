@@ -486,6 +486,19 @@ const sym2 = Symbol("foo");
 console.log(sym === sym2); // false
 // sym = Symbol("baz"); // TypeError: Assignment to constant variable.
 ```
+To get `sym`, use:
+
+```js
+const symbols = Object.getOwnPropertySymbols(obj);
+console.log(symbols[0]); // sym
+```
+
+To get value, use:
+
+```js
+const propertyDescriptor = Object.getOwnPropertyDescriptor(obj, sym);
+console.log(propertyDescriptor.value); // bar
+```
 
 </details>
 
@@ -499,6 +512,9 @@ console.log(sym === sym2); // false
 | Depends on the internal enumerable flag | Depends on the implementation of Symbol.iterator or Symbol.asyncIterator method |
 | Visited by methods that iterate over the object's own or inherited properties | Visited by methods that iterate over the values themselves |
 | Examples: for..in loop, Object.keys, Object.values, Object.entries | Examples: for..of loop, spread syntax, Array.from |
+
+- **Enumerable data types** are `object`, `string`, `number`, `boolean`, `symbol`, and `BigInt`
+- **Iterable data types** are `Map`, `Set`, `Promise.all`, `array`, `string`, `map`, `set`, and `generator`
 
 Imagine you have a bookshelf that contains many books. Each book has a title, an author, a genre, and a number of pages. These are the properties of each book.
 
