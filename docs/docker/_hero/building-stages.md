@@ -18,27 +18,7 @@ Building stages in Docker are a way to create images that use multiple base imag
 
 A building stage is defined by a `FROM` instruction in the `Dockerfile`. Each `FROM` instruction starts a new stage of the build and can use a different base image. You can copy files or run commands in each stage, and then selectively copy artifacts from one stage to another. You can also name your stages using the `AS` keyword after the `FROM` instruction.
 
-For example, here is a `Dockerfile` that uses two building stages to create an image with a Go app:
-
-```dockerfile
-# syntax=docker/dockerfile:1
-# First stage: build the app
-FROM golang:1.16 AS builder # named the stage
-WORKDIR /app
-COPY go.mod go.sum ./
-RUN go mod download
-COPY *.go ./
-RUN CGO_ENABLED=0 go build -o app
-
-# Second stage: copy the app and run it
-FROM alpine:latest
-WORKDIR /app
-COPY --from=builder /app/app . # Copy the app binary from the `builder` stage
-EXPOSE 8080
-CMD [ "./app" ]
-```
-
-or another example with Typescript:
+For example, here is a `Dockerfile` that uses two building stages to create an image with a Typescript app:
 
 ```dockerfile
 # Build stage 1 -> for dev
@@ -61,10 +41,34 @@ CMD npm start
 
 ```
 
-To build the image from this `Dockerfile`, you can use the same `docker build` command as before. You can also specify a target stage using the `--target` option if you don't want to build all the stages. For example, to build only the first stage, you can run:
+or another example with Go app:
+
+```dockerfile
+# syntax=docker/dockerfile:1
+# First stage: build the app
+FROM golang:1.16 AS builder # named the stage
+WORKDIR /app
+COPY go.mod go.sum ./
+RUN go mod download
+COPY *.go ./
+RUN CGO_ENABLED=0 go build -o app
+
+# Second stage: copy the app and run it
+FROM alpine:latest
+WORKDIR /app
+COPY --from=builder /app/app . # Copy the app binary from the `builder` stage
+EXPOSE 8080
+CMD [ "./app" ]
+```
+
+To build the image from this `Dockerfile`, you can use the same `docker build` command:
 
 ```bash
 $ docker build -t go-app:builder --target builder .
 ```
+
+- The `-t` option specifies the ***name and tag*** of the image, which in this case is `go-app:builder` 
+- The `--target` option specifies the name of the build stage to stop at, which in this case is `builder`
+- `.` in the command above means that you want to use the current directory as the build context for the docker build command
 
 </details>

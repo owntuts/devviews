@@ -37,3 +37,82 @@ Some explanations of the features are:
 - Encryption: The ability to protect the data from eavesdropping, tampering, or modification by unauthorized parties. HTTPS (Hypertext Transfer Protocol Secure) is a secure version of HTTP that uses TLS (Transport Layer Security) or SSL (Secure Sockets Layer) to encrypt the data. HTTP/3 requires encryption by default, while HTTP/1 and HTTP/2 can use encryption optionally.
 
 </details>
+
+<details>
+<summary><h5>HTTP/2 Implementation in Nodejs</h5></summary>
+
+HTTP/2 is the latest version of the Hyper Text Transfer Protocol (HTTP), which introduces many improvements and optimizations over the previous version, such as multiplexing, header compression, server push, and prioritization. HTTP/2 can enhance the performance and efficiency of web applications by reducing latency, bandwidth, and complexity.
+
+To implement HTTP/2 in Node.js, you need to use the built-in http2 module, which provides both low-level and high-level APIs for creating HTTP/2 servers and clients. You can also use third-party libraries or frameworks that support HTTP/2, such as Express.js, Koa.js, or Fastify.
+
+To create an HTTP/2 server in Node.js, you can use the http2.createServer() or http2.createSecureServer() methods, depending on whether you want to use plain text or encrypted communication. For example:
+
+```js
+// Import the http2 module
+const http2 = require("http2");
+
+// Create a plain text HTTP/2 server
+const server = http2.createServer();
+
+// Listen for incoming requests
+server.on("stream", (stream, headers) => {
+  // stream is a Duplex object that represents the request and response
+  // headers is an object that contains the request headers
+
+  // Write some response headers
+  stream.respond({
+    ":status": 200,
+    "content-type": "text/html",
+  });
+
+  // Write some response body
+  stream.end("<h1>Hello HTTP/2</h1>");
+});
+
+// Start listening on port 3000
+server.listen(3000);
+```
+
+To create an HTTP/2 client in Node.js, you can use the http2.connect() method, which creates an Http2Session object that represents a persistent connection to a server. You can then use the session.request() method to create an Http2Stream object that represents a single request and response. For example:
+
+```js
+// Import the http2 module
+const http2 = require("http2");
+
+// Create a session with the server
+const session = http2.connect("http://localhost:3000");
+
+// Handle any errors in the session
+session.on("error", (err) => console.error(err));
+
+// Create a request stream
+const req = session.request({
+  ":path": "/",
+});
+
+// Handle any errors in the request stream
+req.on("error", (err) => console.error(err));
+
+// Handle the response headers
+req.on("response", (headers) => {
+  // Log the status code and content type
+  console.log(headers[":status"]);
+  console.log(headers["content-type"]);
+});
+
+// Handle the response body
+req.setEncoding("utf8");
+let data = "";
+req.on("data", (chunk) => {
+  // Append each chunk to the data string
+  data += chunk;
+});
+req.on("end", () => {
+  // Log the entire response body
+  console.log(data);
+});
+
+// End the request stream
+req.end();
+```
+</details>

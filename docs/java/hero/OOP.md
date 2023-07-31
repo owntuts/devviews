@@ -96,11 +96,136 @@ class Eagle extends Animal implements Flyable {
 </details>
 
 <details>
-<summary><h5>differeence among public, private, protected, default, static, final, non-final in java</h5></summary>
+<summary><h5>Access modifiers & Non-access modifiers in java</h5></summary>
 
-- `Public`, `private`, `protected`, and `default` are ***access modifiers*** in Java, which determine the visibility and accessibility of ***classes***, ***methods***, and ***fields***. 
+In Java, there are two types of modifiers: access modifiers and non-access modifiers.
 
-- `Static`, `final`, and non-final are ***non-access modifiers*** in Java, which affect the behavior and ***properties*** of ***classes***, ***methods***, and ***fields***. Here are some differences among them.
+**Access modifiers** ***control the visibility and accessibility*** of classes, methods, and fields. There are four access modifiers in Java:
+
+- **public**: The class, method, or field is accessible from any other class or any package.
+- **private**: The class, method, or field is accessible only within the same class.
+- **protected**: The class, method, or field is accessible within the same package or from subclasses in different packages.
+- **default** (no keyword): The class, method, or field is accessible within the same package.
+
+**Non-access modifiers** ***modify the behavior and properties*** of classes, methods, and fields. There are several non-access modifiers in Java, such as:
+
+- **static**: The class, method, or field belongs to the class and not to any object of the class. It can be accessed without creating an object of the class.
+- **final**: The class, method, or field cannot be changed or overridden. It can be initialized only once.
+- **abstract**: The class or method is incomplete and cannot be instantiated. It can only be extended or implemented by subclasses or subinterfaces.
+- **synchronized**: The method or block can be accessed by only one thread at a time.
+- **volatile**: The field is not cached by threads and its value is always read from the main memory.
+- **transient**: The field is not serialized when the object is saved to a file or sent over a network.
+- **native**: The method is implemented in a platform-dependent language such as C or C++.
+
+Here are some examples of using these modifiers in Java:
+
+```java
+// A public class that can be accessed from any package
+public class Animal {
+  // A private field that can be accessed only within this class
+  private String name;
+  // A protected field that can be accessed within this package or from subclasses in different packages
+  protected int age;
+  // A default field that can be accessed within this package
+  String type;
+  // A public static final field that can be accessed from any class or package and cannot be changed
+  public static final int MAX_AGE = 100;
+  
+  // A public constructor that can be used to create an object of this class from any package
+  public Animal(String name, int age, String type) {
+    this.name = name;
+    this.age = age;
+    this.type = type;
+  }
+  
+  // A private method that can be called only within this class
+  private void setName(String name) {
+    this.name = name;
+  }
+  
+  // A protected method that can be called within this package or from subclasses in different packages
+  protected void setAge(int age) {
+    this.age = age;
+  }
+  
+  // A default method that can be called within this package
+  void setType(String type) {
+    this.type = type;
+  }
+  
+  // A public method that can be called from any class or package
+  public String getName() {
+    return name;
+  }
+  
+  // A public static method that can be called without creating an object of this class
+  public static boolean isOld(int age) {
+    return age > MAX_AGE;
+  }
+  
+  // An abstract method that has no implementation and must be overridden by subclasses
+  public abstract void makeSound();
+}
+
+// A final class that cannot be extended by any other class
+final class Dog extends Animal {
+  
+  // A public constructor that calls the super constructor
+  public Dog(String name, int age) {
+    super(name, age, "Dog");
+  }
+  
+  // An overridden method that provides the implementation for the abstract method in the superclass
+  @Override
+  public void makeSound() {
+    System.out.println("Woof!");
+  }
+}
+
+// An interface that defines some constants and abstract methods
+interface Flyable {
+  
+  // A public static final field that is implicitly declared by the interface
+  int MAX_SPEED = 200;
+  
+  // An abstract method that has no implementation and must be implemented by classes that implement this interface
+  void fly();
+}
+
+// A class that implements an interface and inherits from another class
+class Bird extends Animal implements Flyable {
+  
+  // A private volatile field that is not cached by threads and always read from the main memory
+  private volatile boolean flying;
+  
+  // A public constructor that calls the super constructor
+  public Bird(String name, int age) {
+    super(name, age, "Bird");
+    flying = false;
+  }
+  
+  // A synchronized method that can be accessed by only one thread at a time
+  public synchronized void setFlying(boolean flying) {
+    this.flying = flying;
+  }
+  
+  // An implemented method that provides the implementation for the interface method
+  @Override
+  public void fly() {
+    if (flying) {
+      System.out.println("I am flying at " + MAX_SPEED + " km/h");
+    } else {
+      System.out.println("I am not flying");
+    }
+  }
+  
+  // An overridden method that provides the implementation for the abstract method in the superclass
+  @Override
+  public void makeSound() {
+    System.out.println("Tweet!");
+  }
+}
+```
 
 | Modifier | Access | Mutability | Inheritance | Overriding |
 |----------|--------|------------|-------------|------------|

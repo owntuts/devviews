@@ -269,7 +269,7 @@ interface PersonRepository extends JpaRepository<Person, Long> {
 }
 ```
 
-- To **create a base repository that provides common methods for all entities**, you can use @NoRepositoryBean annotation on an interface that extends CrudRepository. For example, to create a base repository that provides a findById method for all entities using JPA, you can write:
+- To **create a base repository that provides common methods for all entities**, you can use @NoRepositoryBean annotation on an interface that extends CrudRepository. For example, to ***create a base repository that provides a findById method for all entities using JPA***, you can write:
 
 ```java
 @NoRepositoryBean
@@ -279,7 +279,7 @@ interface MyUtilityRepository<T, ID extends Serializable> extends CrudRepository
 }
 ```
 
-- To **mark a field in an entity class as the primary key**, you can use @Id annotation. For example, to mark the id field as the primary key for a person entity using JPA, you can write:
+- To **mark a field in an entity class as the primary key**, you can use `@Id` annotation. For example, to mark the id field as the primary key for a person entity using JPA, you can write:
 
 ```java
 @Entity
@@ -292,7 +292,7 @@ class Person {
 }
 ```
 
-- To **mark a field in an entity class as transient**, meaning that it will ***not be persisted or retrieved by the data store engine***, you can use @Transient annotation. For example, to mark the age field as transient for a person entity using JPA, you can write:
+- To **mark a field in an entity class as transient**, meaning that it will ***not be persisted or retrieved by the data store engine***, you can use` @Transient` annotation. For example, to mark the age field as transient for a person entity using JPA, you can write:
 
 ```java
 @Entity
@@ -305,7 +305,7 @@ class Person {
 }
 ```
 
-- **To enable auditing of an entity class**, meaning that it will automatically record who created or modified the entity and when, you can use @CreatedBy, @LastModifiedBy, @CreatedDate, and @LastModifiedDate annotations. For example, to enable auditing for a person entity using JPA, you can write:
+- **To enable auditing of an entity class**, meaning that it will ***automatically record who created or modified the entity*** and when, you can use `@CreatedBy`, `@LastModifiedBy`, `@CreatedDate`, and `@LastModifiedDate` annotations. For example, to enable auditing for a person entity using JPA, you can write:
 
 ```java
 @Entity

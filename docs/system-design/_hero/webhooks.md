@@ -5,14 +5,39 @@
 
 ![webhooks](/img/interviews/design-system/webhooks.png)
 
-1. A user or application initiates an action that triggers a webhook. For example, a customer making a purchase on an e-commerce website.
+Sure, here is an example of a webhook and the steps on how it works:
 
-2. The application that’s responsible for the trigger (in our example, the e-commerce website) generates an HTTP POST request containing data related to that event. This request is sent to the webhook URL that has been previously configured by the receiver (in our example, the webhook receiver).
+**Example:**
 
-3. The receiver’s server listens for incoming HTTP POST requests at that specific URL. When it receives a request from the sender, it automatically responds with an HTTP status code that indicates it's received the request.
+Let's say you have a website that allows users to sign up for your newsletter. When a user signs up, you want to send them an email confirmation. You can use a webhook to automatically send the email confirmation when the user signs up.
 
-4. The receiver now has the data that was sent from the sender. It can retrieve this data and act on it as necessary. For example, recording the purchase in a database or updating inventory levels.
+**Steps:**
 
-5. The receiver sends an optional response back to the sender, indicating whether the webhook request was successful or not. This response can be in the form of an HTTP status code or a more detailed JSON payload.
+1. The user signs up for your newsletter on your website.
+2. The website sends a POST request to the webhook URL that you have configured.
+3. The webhook URL receives the POST request and parses the data.
+4. The webhook URL sends an email confirmation to the user.
 
+**How it works:**
+
+When a user signs up for your newsletter, the website sends a POST request to the webhook URL. The webhook URL is a unique URL that you have configured to receive POST requests from your website. The POST request contains data about the user who signed up, such as their email address and name.
+
+The webhook URL parses the data in the POST request and then takes some action based on the data. In this example, the webhook URL sends an email confirmation to the user.
+
+Webhooks are a powerful way to automate tasks and send notifications between applications. They can be used in a variety of ways, such as:
+
+* Sending email notifications
+* Updating a database
+* Launching a workflow
+* Triggering an API call
+
+If you are looking for a way to automate tasks or send notifications between applications, webhooks are a great option.
+
+Here are some other examples of webhooks:
+
+* When a new tweet is posted, a webhook can be used to send a notification to your Slack channel.
+* When a new order is placed in your WooCommerce store, a webhook can be used to send an email notification to the customer.
+* When a new issue is created in your GitHub repository, a webhook can be used to send a notification to your team.
+
+Webhooks are a powerful tool that can be used to automate tasks and send notifications between applications. If you are looking for a way to improve the efficiency of your workflow, webhooks are a great option.
 </details>

@@ -58,14 +58,19 @@ There are different types of operators that work with array datatypes in MongoDB
 
 There are different types of operators that work with relationships in MongoDB, depending on how you model them. Here is a list of some common operators with examples for each:
 
-- If you use embedding, you can use **array operators** to perform operations on embedded arrays, such as accessing elements, concatenating arrays, filtering arrays, etc. For example:
+- **If you use embedding**, you can use **array operators** to perform operations on embedded arrays, such as accessing elements, concatenating arrays, filtering arrays, etc. For example:
 
 ```javascript
 // Access the first element of the comments array field
 { $arrayElemAt: [ "$comments", 0 ] }
 
-// Concatenate the tags and categories array fields
-{ $concatArrays: [ "$tags", "$categories" ] }
+// Concatenate the courses and clubs array fields
+db.students.aggregate([
+  { $project: {
+    name: 1,
+    activities: { $concatArrays: [ "$courses", "$clubs" ] }
+  }}
+])
 
 // Filter the items array field by price
 { $filter: {
@@ -78,16 +83,16 @@ There are different types of operators that work with relationships in MongoDB, 
 { $size: "$comments" }
 ```
 
-- If you use referencing, you can use **aggregation operators** to perform operations on referenced documents, such as joining collections, unwinding arrays, grouping documents, etc. For example:
+- **If you use referencing**, you can use **aggregation operators** to perform operations on referenced documents, such as joining collections, unwinding arrays, grouping documents, etc. For example:
 
 ```javascript
 // Join the posts collection with the authors collection by _id
-{ $lookup: {
+db.orders.aggregate([{ $lookup: {
    from: "authors",
    localField: "author_id",
    foreignField: "_id",
    as: "author"
-} }
+} }])
 
 // Deconstruct the comments array field
 { $unwind: "$comments" }

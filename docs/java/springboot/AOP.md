@@ -29,7 +29,7 @@ To use AOP in Spring Boot, we need to follow these steps:
 </dependency>
 ```
 
-- **Define an aspect class** that encapsulates the cross-cutting concern. An aspect class is a normal class annotated with @Aspect annotation. It can also have other annotations, such as @Component or @Order, depending on the use case.
+- **Define an aspect class** that encapsulates the cross-cutting concern. An aspect class is a normal class annotated with `@Aspect` annotation. It can also have other annotations, such as `@Component` or `@Order`, depending on the use case.
 - **Define one or more pointcuts** that specify where the aspect should be applied. 
   - **A pointcut** is an expression that matches one or more join points in the application. We can define pointcuts using AspectJ expression language or annotations.
   - **A join point** is a point during the execution of a program, such as the execution of a method or the handling of an exception. 

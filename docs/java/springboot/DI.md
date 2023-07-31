@@ -81,6 +81,40 @@ public class MyBean {
 </details>
 
 <details>
+<summary><h5>ScopedProxyMode</h5></summary>
+
+You have a ***checkout service that is a singleton-scoped bean*** and depends on the ***shopping cart service (which is a session-scoped bean)***. How can you ***inject the shopping cart service into the checkout service*** without creating a new instance of the checkout service for each session?
+
+This is where scoped proxies come in handy. When you declare `proxyMode = ScopedProxyMode`, a proxy bean is auto created and deligate jobs to shopping cart service but it's scope is suitable to checkout service.
+
+- `ScopedProxyMode.INTERFACES` means that ***the proxy will implement the same interfaces as the target bean and delegate*** all method calls to the current instance of the target bean. This option requires that the target bean has at least one interface.
+- `ScopedProxyMode.TARGET_CLASS` means that ***the proxy will be a subclass of the target bean and override all methods to delegate*** to the current instance of the target bean. This option uses CGLIB to create the proxy and does not require any interfaces.
+
+
+Here is some code that illustrates this example:
+
+```java
+// Shopping cart service
+@Service
+@Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
+public class ShoppingCartService {
+    // Some fields and methods
+}
+
+// Checkout service
+@Service
+public class CheckoutService {
+    // Inject the shopping cart proxy
+    @Autowired
+    private ShoppingCartService shoppingCart;
+
+    // Some methods that use the shopping cart
+}
+```
+
+</details>
+
+<details>
 <summary><h5>Bean Scopes</h5></summary>
 
 Bean scopes in Spring Boot are the same as bean scopes in Spring Framework. They define the life cycle and visibility of a bean in the application context. The ***default bean scope is singleton***, which means that only one instance of a bean is created and shared by all components that need it. Other bean scopes are `prototype`, `request`, `session`, `application`, and `websocket`, which have different behaviors depending on the context and use case.

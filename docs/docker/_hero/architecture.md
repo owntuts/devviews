@@ -10,7 +10,7 @@ tags:
 <!-- ![for root](/img/interviews/angular/forroot.png) -->
 
 <details open>
-<summary><h5>RUN vs CMD vs ENTRYPOINT</h5></summary>
+<summary><h5>Docker Architecture</h5></summary>
 
 ![Docker Architecture](/img/interviews/docker/architecture.png)
 
