@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkinterviewdev=self.webpackChunkinterviewdev||[]).push([[2549],{98306:function(e){e.exports=JSON.parse('{"label":"Javascript","permalink":"/devviews/interviews/tags/javascript","allTagsPath":"/devviews/interviews/tags","count":1,"items":[{"id":"js/intro","title":"Javascript","description":"\x3c!--","permalink":"/devviews/interviews/js/intro"}]}')}}]);
