@@ -76,7 +76,7 @@ function App() {
 export default App;
 ```
 
-In this example, the input value state is updated immediately as the user types, while the items state is updated asynchronously with a delay. The `useTransition` hook returns an `isPending` flag that tells you whether there is a pending transition and a `startTransition` function that lets you mark a state update as a transition. The `startTransition` function tells React that the items state update is not urgent and can be deferred until the input value state update is done. This way, the user can see the letters as they type without waiting for the items to load. The `isPending` flag can be used to display a loading indicator while the transition is in progress.
+In this example, the input value state is updated immediately as the user types, while the items state is updated asynchronously with a delay. The `useTransition` hook returns an `isPending` flag that tells you whether there is a pending transition and a `startTransition` function that lets you mark a state update as a transition. The ***`startTransition` function tells React that the items state update is not urgent and can be deferred*** until the input value state update is done. This way, the user can see the letters as they type without waiting for the items to load. The `isPending` flag can be used to display a loading indicator while the transition is in progress.
 
 You can try this example on CodeSandbox: https://codesandbox.io/s/usetransition-example-8xk4g
 

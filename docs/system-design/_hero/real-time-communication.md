@@ -42,7 +42,7 @@ Server-sent events (SSE) are a way of creating a persistent connection between a
 To implement SSE in JavaScript, you need to use the **EventSource** interface, which lets you create an object that connects to a URL that generates events. For example:
 
 ```js
-const evtSource = new EventSource("ssedemo.php");
+const evtSource = new EventSource("https://example.com/ssedemo");
 ```
 
 Then, you can listen for **message** events from the server, which contain the data sent by the server. For example:

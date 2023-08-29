@@ -101,5 +101,4 @@ docker run -it --network my-overlay --name database mysql
 
 This will create an overlay network called `my-overlay` and connect both the `webserver` and `database` containers to it. The `webserver` container will be able to communicate with the `database` container, even though they are running on different hosts.
 
-
 </details>
